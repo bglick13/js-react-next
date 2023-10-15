@@ -7,7 +7,7 @@ export function ReactExample() {
   const [color, setColor] = React.useState<Color>("red");
 
   return (
-    <div className={`bg-${color}-200 p-4 rounded-md`}>
+    <div className={`bg-${color}-400 p-4 rounded-md`}>
       <h1 className="text-2xl font-bold">React Example</h1>
       <div className="flex lg:flex-row flex-col gap-4 w-fit">
         <button
