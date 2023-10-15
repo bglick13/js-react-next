@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,7 +15,9 @@ export default function Home() {
       </div>
 
       <div className="flex flex-row items-center gap-8">
-        <Button>Slides</Button>
+        <Button>
+          <Link href="/slides/1">Slides</Link>
+        </Button>
         <Button variant="secondary">
           <Github className="mr-2 h-4 w-4" /> Code
         </Button>
