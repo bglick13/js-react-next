@@ -1,0 +1,88 @@
+---
+title: Javascript Basics
+slideNumber: 2
+---
+<h2 className="text-xl font-bold text-slate-200">Good to know</h2>
+
+<ul className="list-disc px-4">
+  <li>Ternary operators</li>
+  <ul className="list-inside">
+    <li>
+    ```tsx
+    true ? "yes" : "no";
+    ```
+    </li>
+  </ul>
+</ul>
+
+<ul className="list-disc px-4">
+  <li>Conditional chaining</li>
+  <ul className="list-inside">
+    <li>
+    ```tsx
+    obj?.prop;
+    ```
+    </li>
+  </ul>
+</ul>
+
+
+
+<ul className="list-disc px-4">
+  <li>Array destructuring</li>
+  ```js
+  const [first, second] = array;
+  ```
+</ul>
+
+
+
+<ul className="list-disc px-4">
+  <li>Array filtering</li>
+  ```js
+  array.filter((item) => item === "something");
+  ```
+</ul>
+
+
+<h2 className="text-xl font-bold text-slate-200">Gotchas</h2>
+
+<ul className="list-disc px-4">
+  <li>Dynamically typed</li>
+  ```js
+  var x = 1;
+  x = "hello"
+  ```
+  <ul className="list-disc list-inside">
+    <li>Solution: Use Typescript</li>
+    <ul className="list-inside px-8">
+      <li>
+        ```js
+        var x: number = 1; 
+        x = "hello; ---> type warning
+        ```
+      </li>
+    </ul>
+  </ul>
+</ul>
+
+
+<ul className="list-disc px-4">
+  <li>Unchecked nulls</li>
+  ```js
+  const x = null;
+  x.prop
+  ```
+  <ul className="list-disc list-inside">
+    <li>Solution: Use optional chaining and error handling</li>
+    <ul className="list-inside px-8">
+      <li>
+       ```js
+    const x = null;
+    if (x?.prop); --> handle missing value
+    ```
+      </li>
+    </ul>
+    
+  </ul>
+</ul>

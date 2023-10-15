@@ -1,0 +1,45 @@
+---
+title: React Example
+slideNumber: 5
+componentName: React Example
+---
+
+```tsx
+"use client";
+import React from "react";
+
+type Color = "red" | "green" | "blue";
+
+export function ReactExample() {
+  const [color, setColor] = React.useState<Color>("red");
+
+  return (
+    <div className={`bg-${color}-200 p-4 rounded-md`}>
+      <h1 className="text-2xl font-bold">React Example</h1>
+      <div className="flex flex-row gap-4">
+        <button
+          className="bg-red-200 p-4 rounded-md"
+          onClick={() => setColor("red")}
+        >
+          Red
+        </button>
+        <button
+          className="bg-green-200 p-4 rounded-md"
+          onClick={() => setColor("green")}
+        >
+          Green
+        </button>
+        <button
+          className="bg-blue-200 p-4 rounded-md"
+          onClick={() => setColor("blue")}
+        >
+          Blue
+        </button>
+      </div>
+    </div>
+  );
+}
+
+```
+
+

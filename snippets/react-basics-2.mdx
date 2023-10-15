@@ -1,0 +1,69 @@
+---
+title: React Basics
+slideNumber: 3
+---
+<h2 className="text-xl font-bold text-slate-200">Good to know</h2>
+
+<ul className="list-disc px-4">
+  <li>Declarative UI library: You tell React what you want the sreen to look like, React figures out how to do it</li>
+</ul>
+
+<ul className="list-disc px-4">
+  <li>Composed of React Components: A function that returns JSX (HTML-like syntax)</li>
+  <ul className="list-inside">
+    <li>
+    ```tsx
+    function Button({ label }: {label: string}) {
+      return <button>{label}</button>
+    }
+    ```
+    </li>
+  </ul>
+</ul>
+
+
+
+<ul className="list-disc px-4">
+  <li>Functional programming through hooks for things like state management, lifecycle methods, etc.</li>
+  ```tsx
+  function TextInput() {
+    const [value, setValue] = React.useState("");
+    return <input value={value} onChange={(e) => setValue(e.target.value)} />
+}
+  ```
+</ul>
+
+
+
+<ul className="list-disc px-4">
+  <li>Huge ecosystem of libraries to extend functionality:</li>
+    <ul className="list-disc list-inside">
+      <li>React Query</li>
+      <li>React Router</li>
+      <li>Jotai</li>
+    </ul>
+  
+</ul>
+
+
+<h2 className="text-xl font-bold text-slate-200">Gotchas</h2>
+
+<ul className="list-disc px-4">
+  <li>Reactive: rerenders when props or state change</li>
+  <ul className="list-disc list-inside">
+    <li>Solution: Be mindful of what's in the render path, use React.useEffect for side effects</li>
+    <ul className="list-inside px-8">
+      <li>
+        ```tsx
+        function TextInput() {
+          const [value, setValue] = React.useState("");
+          React.useEffect(() => {
+            console.log(value);
+          }, [value]);
+          return <input value={value} onChange={(e) => setValue(e.target.value)} />
+}
+        ```
+      </li>
+    </ul>
+  </ul>
+</ul>
