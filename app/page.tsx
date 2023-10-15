@@ -18,9 +18,11 @@ export default function Home() {
         <Button>
           <Link href="/slides/1">Slides</Link>
         </Button>
-        <Button variant="secondary">
-          <Github className="mr-2 h-4 w-4" /> Code
-        </Button>
+        <Link href="https://github.com/bglick13/js-react-next">
+          <Button variant="link">
+            <Github className="mr-2 h-4 w-4" /> Code
+          </Button>
+        </Link>
       </div>
     </main>
   );
